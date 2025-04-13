@@ -9,11 +9,6 @@ Event Library is a Flutter-based application designed to showcase a list of even
 - Responsive design for both Android and iOS platforms.
 - Utilizes modern Flutter libraries like `bloc`, `freezed`, and `retrofit`.
 
-## Project Structure
-
-. ├── android/ # Android-specific files ├── ios/ # iOS-specific files ├── lib/ # Main application code │ ├── data/ # Data models and API integration │ ├── di/ # Dependency injection setup │ ├── widgets/ # UI components │ └── main.dart # Application entry point ├── test/ # Unit and widget tests ├── pubspec.yaml # Project dependencies └── README.md # Project documentation
-
-
 ## Getting Started
 
 ### Prerequisites
@@ -33,21 +28,29 @@ Event Library is a Flutter-based application designed to showcase a list of even
 ```bash
     flutter pub get
 ```
-    In order to get events from Ticketmaster you need to create a free account and pass your api key as an environment variable with the `TICKETMASTER_API_KEY` name. Please be careful and don't commit your api keys to any repos.
+    
+In order to get events from Ticketmaster you need to create a free account and pass your api key as an environment variable with the `TICKETMASTER_API_KEY` name. Please be careful and don't commit your api keys to any repos.
 
-3. Run the app:
+3. Regenerate files:
+```bash
+    dart run build_runner build --delete-conflicting-outputs
+```
+Generated files are pushed to the repo, so there's no need to generate them before running the app. Generation needs to be done only when there are changes.
+
+4. Run the app:
 ```bash
     flutter run
 ```
-    Please note that the .vscode/launch.json is added to the ignored files list.
+Please note that the .vscode/launch.json file is added to the ignored files list.
 
 ## Dependencies
 The project uses the following key dependencies:
 
-flutter_bloc: State management.
-freezed: Code generation for immutable classes.
-retrofit: API client generation.
-dio: HTTP client for API requests.
+- flutter_bloc: State management.
+- build_runner: Run code generators.
+- freezed: Code generation for immutable classes.
+- retrofit: API client generation.
+- dio: HTTP client for API requests.
 For a full list of dependencies, see the pubspec.yaml file.
 
 ## License
