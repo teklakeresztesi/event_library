@@ -33,12 +33,13 @@ Event Library is a Flutter-based application designed to showcase a list of even
 ```bash
     flutter pub get
 ```
-    In order to get events from Ticketmaster you need to create a free account and pass your api key as an environment variable with the `TICKETMASTER_API_KEY` name.
+    In order to get events from Ticketmaster you need to create a free account and pass your api key as an environment variable with the `TICKETMASTER_API_KEY` name. Please be careful and don't commit your api keys to any repos.
 
 3. Run the app:
 ```bash
     flutter run
 ```
+    Please note that the .vscode/launch.json is added to the ignored files list.
 
 ## Dependencies
 The project uses the following key dependencies:
